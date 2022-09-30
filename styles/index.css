@@ -230,8 +230,13 @@ table {
   }
 
 @media only screen and (max-width: 767px) {
-    /* phones */
-
+    #currentlyListeningBox {
+        flex-direction: column;
+        gap: 8px;
+    }
+    #currentName {
+        right: 16px;
+    }
 }
 
 @media
