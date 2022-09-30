@@ -56,11 +56,10 @@ body {
     flex-direction: column;
     text-align : center;
     justify-content: center;
-    overflow-x: hidden;
 
     min-height: 100vh;
-    /* min-width: 100vw; */
     padding: 16px;
+    gap: 16px;
 }
 
 #hero {
@@ -102,8 +101,8 @@ table {
 }
 
 .musicBox {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     /* box-shadow: -5px 5px 5px lightgray */
 }
 .musicBox>* {
@@ -111,8 +110,8 @@ table {
     top: 0;
     right: 0;
     transition: all ease 0.5s;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
 }
 
 .musicBox>*:hover {
@@ -153,26 +152,44 @@ table {
 
 
 .section {
+    font-size: xx-large;
     height: 500px;
-}
-#favorites {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 32px;
+    padding: 32px;
 }
-#currentlyListening {
+#currentInfo {
+    text-align: right;
+}
+#currentInfo>* {
+    position: relative;
+    top: 0;
+    right: 0;
+    transition: all ease 0.5s;
+}
+#currentInfo>*:hover {
+    top: -5px;
+    right: -2px;
+}
+#currentlyListeningBox {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 128px;
+}
+#currentName {
+    font-style: italic;
+    letter-spacing: -5px;
+    font-family: 'KanitBold', Arial, sans-serif;
+    font-size: 64px;
+}
+/* #favorites {
+
 }
 #suggestions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+
+} */
 
 
 
