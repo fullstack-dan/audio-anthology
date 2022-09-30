@@ -36,9 +36,13 @@ time, mark, audio, video {
 
 html {
   scroll-behavior: smooth;
-  width: 100%;
-  text-align: center;
 }
+/* * { //debugging!
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  } */
+
 
 body {
     color: white;
@@ -52,14 +56,15 @@ body {
     flex-direction: column;
     text-align : center;
     justify-content: center;
+    overflow-x: hidden;
 
     min-height: 100vh;
-    min-width: 100vh;
+    /* min-width: 100vw; */
     padding: 16px;
 }
 
 #hero {
-    height: 100vh; 
+    height: 100vh;
     display: flex;
     flex-direction: column;
     text-align : center;
@@ -206,3 +211,22 @@ table {
       transform: translateY(0);
     }
   }
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+
+  html,
+  body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
+}
