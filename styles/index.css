@@ -28,6 +28,10 @@ time, mark, audio, video {
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     color: white;
     background-color: #010015;
@@ -149,6 +153,47 @@ table {
     color: white;
 }
 
-#heroSubtitle {
+.subtitle {
     font-size: x-large;
 }
+
+.icon {
+    position: relative;
+    bottom: 0;
+    transition: all ease 0.5s;
+
+    width: 25px;
+    height: 25px;
+}
+.icon:hover {
+    bottom: -5px;
+}
+
+
+#heroScroller {
+    animation: 3s ease-out 0s 1 slideInFromBottom;
+
+    text-align: center;
+    position: relative;
+    top: 310px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0%;
+      transform: translateY(100%);
+    }
+    50% { 
+        opacity: 0%;
+        transform: translateY(100%)
+    }
+    100% {
+        opacity: 100%;
+      transform: translateY(0);
+    }
+  }
