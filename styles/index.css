@@ -1,7 +1,13 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+
+@font-face {
+    font-family: "Kanit";
+    src: url("../resources/fonts/Kanit/Kanit-Regular.ttf");
+}
+@font-face {
+    font-family: "KanitBold";
+    src: url("../resources/fonts/Kanit/Kanit-Bold.ttf");
+}
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -30,26 +36,39 @@ time, mark, audio, video {
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  text-align: center;
 }
 
 body {
     color: white;
     background-color: #010015;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../resources/images/comedy-genhashino.jpeg);
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../resources/images/comedy-genhashino.jpeg);
+    background-position: center;
+    background-repeat:initial;
     background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    text-align : center;
+    justify-content: center;
+
+    min-height: 100vh;
+    min-width: 100vh;
+    padding: 16px;
 }
 
+#hero {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    text-align : center;
+    justify-content: center;
+    gap: 16px;
 
-
-@font-face {
-    font-family: "Kanit";
-    src: url("../resources/fonts/Kanit/Kanit-Regular.ttf");
-}
-@font-face {
-    font-family: "KanitBold";
-    src: url("../resources/fonts/Kanit/Kanit-Bold.ttf");
+    /* border-style: solid;
+    border-color: white;
+    border-width: 5px; */
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -94,8 +113,6 @@ table {
 .musicBox>*:hover {
     top: -5px;
     right: -2px;
-    width: 250px;
-    height: 250px;
 }
 
 .musicContainer {
@@ -104,16 +121,35 @@ table {
 }
 
 
-.section {
-    height: 500px;
+
+#hero>* {
+    color: white;
 }
 
 #heroTitle {
+    text-align: center;
     font-size: 64px;
     letter-spacing: -5px;
     font-family: 'KanitBold', Arial, sans-serif;
 }
+#heroScroller {
+    animation: 4s ease-out 0s 1 slideInFromBottom;
 
+    text-align: center;
+    position: relative;
+    top: 33%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+
+
+.section {
+    height: 500px;
+}
 #favorites {
     display: flex;
     flex-direction: column;
@@ -133,27 +169,10 @@ table {
     justify-content: center;
 }
 
-#hero {
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../resources/images/heroImage.jpg);
-    background-color: #cccccc; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover; */
 
-    height: 700px; 
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-}
-
-#hero>* {
-    color: white;
-}
 
 .subtitle {
+    text-align: center;
     font-size: x-large;
 }
 
@@ -169,28 +188,18 @@ table {
     bottom: -5px;
 }
 
-
-#heroScroller {
-    animation: 3s ease-out 0s 1 slideInFromBottom;
-
-    text-align: center;
-    position: relative;
-    top: 310px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
 @keyframes slideInFromBottom {
     0% {
         opacity: 0%;
       transform: translateY(100%);
     }
-    50% { 
+    75% { 
         opacity: 0%;
         transform: translateY(100%)
+    }
+    90% {
+        opacity: 100%;
+      transform: translateY(-6%);
     }
     100% {
         opacity: 100%;

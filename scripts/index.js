@@ -6,7 +6,7 @@ const heroScrollIcon = document.querySelector('#heroScrollIcon');
 musicBoxes.forEach(box => {
     box.addEventListener('mouseover', () => {
         body.style.transition = `all ease 1s`;
-        body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(${box.firstChild.getAttribute("src")}`;
+        body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${box.firstChild.getAttribute("src")}`;
     })
 });
 
