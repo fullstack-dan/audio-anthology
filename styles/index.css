@@ -22,7 +22,32 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+
+    font-family: 'Kanit', Arial, sans-serif;
+
+
 }
+
+body {
+    color: white;
+    background-color: #010015;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../resources/images/comedy-genhashino.jpeg);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+
+
+
+@font-face {
+    font-family: "Kanit";
+    src: url("../resources/fonts/Kanit/Kanit-Regular.ttf");
+}
+@font-face {
+    font-family: "KanitBold";
+    src: url("../resources/fonts/Kanit/Kanit-Bold.ttf");
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -31,6 +56,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
@@ -47,14 +73,70 @@ table {
 	border-spacing: 0;
 }
 
+.musicBox {
+    width: 250px;
+    height: 250px;
+    /* box-shadow: -5px 5px 5px lightgray */
+}
+.musicBox>* {
+    position: relative;
+    top: 0;
+    right: 0;
+    transition: all ease 0.5s;
+    width: 250px;
+    height: 250px;
+}
+
+.musicBox>*:hover {
+    top: -5px;
+    right: -2px;
+    width: 250px;
+    height: 250px;
+}
+
+.musicContainer {
+    display: flex;
+    gap: 16px;
+}
+
+
+.section {
+    height: 500px;
+}
+
+#heroTitle {
+    font-size: 64px;
+    letter-spacing: -5px;
+    font-family: 'KanitBold', Arial, sans-serif;
+}
+
+#favorites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#currentlyListening {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#suggestions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 #hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../resources/images/heroImage.jpg);
-    background-color: #cccccc; /* Used if the image is unavailable */
-    height: 500px; /* You must set a specified height */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../resources/images/heroImage.jpg);
+    background-color: #cccccc; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; */
+
+    height: 700px; 
 
     display: flex;
     flex-direction: column;
@@ -67,9 +149,6 @@ table {
     color: white;
 }
 
-#heroTitle {
-    font-size: xx-large;
-}
 #heroSubtitle {
     font-size: x-large;
 }
