@@ -33,11 +33,17 @@ time, mark, audio, video {
 
 
 }
+a {
+    all: unset;
+}
+a {
+    cursor: pointer;
+}
 
 html {
   scroll-behavior: smooth;
 }
-/* * { //debugging!
+/* * { 
     background: #000 !important;
     color: #0f0 !important;
     outline: solid #f00 1px !important;
@@ -47,7 +53,7 @@ html {
 body {
     color: white;
     background-color: #010015;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../resources/images/comedy-genhashino.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../resources/images/heroImage.jpg);
     background-position: center;
     background-repeat:initial;
     background-size: cover;
@@ -59,10 +65,13 @@ body {
 
     min-height: 100vh;
     padding: 16px;
-    gap: 16px;
+    gap: 32px;
+
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=70273);
 }
 
 #hero {
+    animation: 1s ease-out 0s 1 fadeIn;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -105,16 +114,23 @@ table {
     height: 350px;
     /* box-shadow: -5px 5px 5px lightgray */
 }
+
+.musicBox img {
+    max-width: 100%;
+    height: auto;
+  }
+
 .musicBox>* {
     position: relative;
     top: 0;
     right: 0;
-    transition: all ease 0.5s;
+    transition: all ease 1s;
     width: 350px;
     height: 350px;
 }
 
 .musicBox>*:hover {
+    cursor: pointer;
     top: -5px;
     right: -2px;
 }
@@ -148,7 +164,6 @@ table {
     align-items: center;
     gap: 8px;
 }
-
 
 
 .section {
@@ -187,6 +202,23 @@ table {
 /* #favorites {
 
 }
+*/
+
+#libLink {
+    display: flex;
+    justify-content: center;
+}
+
+#libLink img {
+    position: relative;
+    right: 0;
+    transition: all ease 0.5s;
+}
+#libLink img:hover {
+    right: -5px;
+}
+
+/*
 #suggestions {
 
 } */
@@ -210,6 +242,163 @@ table {
     bottom: -5px;
 }
 
+#album-art {
+    position: relative;
+    top: 0;
+    right: 0;
+    transition: all ease 1s;
+}
+
+#album-art:hover {
+    top: -5px;
+    right: -2px;
+}
+
+#album-side {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+}
+
+#album-display {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+    gap: 16px;
+
+}
+
+#album-tracks {
+    max-width: 600px;
+}
+
+#album-text-info {
+    text-align: left;
+    width: 100%;
+}
+
+#album-text-info>* {
+    overflow-wrap: normal;
+    max-width: 300px;
+}
+
+#album-art {
+    max-width: 300px;
+    max-height: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#album-text-info>h1 {
+    font-family: 'KanitBold', Arial, sans-serif;
+    /* letter-spacing: -5px; */
+}
+#album-text-info>p {
+    font-size: 24px;
+}
+
+#expand-artist {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#artist-side {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+
+    text-align: right;
+}
+
+#artist-text-info {
+    text-align: right;
+    width: 100%;
+}
+
+#artist-text-info>h1 {
+    font-family: 'KanitBold', Arial, sans-serif;
+    /* letter-spacing: -5px; */
+}
+#artist-text-info>p {
+    font-size: 24px;
+}
+
+#artist-art {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.track {
+    display: flex;
+}
+.track>* {
+    font-size: smaller;
+    text-align: left;
+}
+
+#album-search, #artist-search {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+#album-search-box, #artist-search-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    align-items: center;
+}
+
+#search-box>input {
+    width: 150px;
+    height: 10px;
+    font-size: 16px;
+    padding: 8px;
+    /* border-radius: 5px; */
+    border: 1px solid black;
+}
+
+#search-button, #artist-search-button {
+    text-decoration: underline;
+    cursor: pointer;
+
+    font-size: 24px;
+}
+
+#search-results {
+    display: flex;
+    flex-direction: column;
+    /* gap: 16px; */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    
+}
+
+#search-results>* {
+    text-align: left;
+    font-size: 24px;
+    color: white;
+    padding: 8px;
+}
+
+#search-results>*:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 @keyframes slideInFromBottom {
     0% {
         opacity: 0%;
@@ -222,6 +411,17 @@ table {
     90% {
         opacity: 100%;
       transform: translateY(-6%);
+    }
+    100% {
+        opacity: 100%;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+        opacity: 0%;
+      transform: translateY(5%);
     }
     100% {
         opacity: 100%;

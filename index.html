@@ -1,46 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Audio Anthology</title>
+    <title>audio anthology.</title>
 </head>
+
 <body>
     <div id="hero">
         <h1 id="heroTitle">audio anthology.</h1>
         <h2 class="subtitle">fullstackdan's digital music collection.</h2>
         <div id="heroScroller">
             <h2 class="subtitle">find something to listen to</h2>
-            <img class="icon" src="resources/icons/expand_more_FILL0_wght400_GRAD0_opsz48 (1).svg" id="heroScrollIcon"alt="">
+            <img class="icon" src="resources/icons/expand_more_FILL0_wght400_GRAD0_opsz48 (1).svg" id="heroScrollIcon"
+                alt="">
         </div>
     </div>
     <div class="section" id="currentlyListening">
         <h1 class="sectionHeader">currently listening to...</h1>
         <div id="currentlyListeningBox">
-            <div class="musicBox"><img src="resources/images/comedy-genhashino.jpeg" alt="Comedy by Gen Hashino cover"></div>
+            <div class="musicBox" data-album-id="2z9lM6LDS58F70IGyQ1XMK"><img src="resources/images/neverenough.jpeg"
+                    alt="NEVER ENOUGH - Daniel Caesar"></div>
             <div id="currentInfo">
-                <h1 id="currentName">Comedy</h1>
-                <p>Gen Hoshino</p>
-                <p>Album: Comedy</p>
-                <p>2022</p>
+                <h1 id="currentName">Toronto 2014</h1>
+                <p>Daniel Caesar</p>
+                <p>Album: NEVER ENOUGH</p>
+                <p>2023</p>
             </div>
         </div>
     </div>
-    <div class="section"  id="favorites">
+    <div class="section" id="favorites">
         <h1>my favorites.</h1>
         <div class="musicContainer">
-            <div class="musicBox"><img src="resources/images/24kmagic.jpg" alt="24K Magic Album cover"></div>
-            <div class="musicBox"><img src="resources/images/TPAB.jpg" alt="To Pimp A Butterfly Album cover"></div>
-            <div class="musicBox"><img src="resources/images/mbdtf.jpg" alt="My Beautiful Dark Twisted Fantasy Album cover"></div>
+            <div class="musicBox" data-album-id="1GG6U2SSJPHO6XsFiBzxYv"><img src="resources/images/cmiygl-tes.jpeg"
+                    alt="CALL ME IF YOU GET LOST: The Estate Sale - Tyler The Creator"></div>
+            <div class="musicBox" data-album-id="07w0rG5TETcyihsEIZR3qG"><img src="resources/images/sos.jpeg"
+                    alt="SOS - SZA"></div>
+            <div class="musicBox" data-album-id="4gR3h0hcpE1iJH0v5bVv78"><img
+                    src="resources/images/heroesandvillains.jpeg" alt="Heroes and Villains - Metro Boomin"></div>
         </div>
-        <h1>check out my library</h1>
+        <!-- <div id="libLink" style="cursor: pointer;">
+            <h1>check out my library</h1>
+            <img style="width: 38px; height: 38px;" src="resources/icons/keyboard_arrow_right_white_24dp.svg" alt="">
+        </div> -->
     </div>
-    <div class="section"  id="suggestions">Share music with me!</div>
-
-    
+    <div class="section" id="search">
+        <div id="album-search">
+            <h1>Find your favorite albums!</h1>
+            <div id="album-search-box">
+                <input type="text" id="album-input" placeholder="Album name">
+                <div id="search-button">Search</div>
+            </div>
+        </div>
+        <div id="artist-search">
+            <h1>Search for artists!</h1>
+            <div id="artist-search-box">
+                <input type="text" id="artist-input" placeholder="Artist name">
+                <div id="artist-search-button">Search</div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="album-display">
+        <div id="album-side">
+        </div>
+        <div id="artist-side">
+        </div>
+    </div>
 </body>
 <link rel="stylesheet" href="styles/index.css">
-<script src="scripts/index.js"></script>
-</html>
+<script type="module" src="scripts/index.js"></script>
 
+</html>
