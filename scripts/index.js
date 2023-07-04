@@ -113,7 +113,7 @@ function populateAlbumDisplay(data) {
 
   albumArt.addEventListener("mouseover", () => {
     body.style.transition = `all ease 1s`;
-    body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${albumArt.getAttribute(
+    body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${albumArt.getAttribute(
       "src"
     )}`;
   });
