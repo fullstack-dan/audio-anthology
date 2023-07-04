@@ -1,43 +1,107 @@
-
 @font-face {
-    font-family: "Kanit";
-    src: url("../resources/fonts/Kanit/Kanit-Regular.ttf");
+  font-family: "Kanit";
+  src: url("../resources/fonts/Kanit/Kanit-Regular.ttf");
 }
 @font-face {
-    font-family: "KanitBold";
-    src: url("../resources/fonts/Kanit/Kanit-Bold.ttf");
+  font-family: "KanitBold";
+  src: url("../resources/fonts/Kanit/Kanit-Bold.ttf");
 }
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-
-    font-family: 'Kanit', Arial, sans-serif;
-
-
+  font-family: "Kanit", Arial, sans-serif;
 }
 a {
-    all: unset;
+  all: unset;
 }
 a {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 html {
@@ -49,155 +113,165 @@ html {
     outline: solid #f00 1px !important;
   } */
 
-
 body {
-    color: white;
-    background-color: #010015;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../resources/images/heroImage.jpg);
-    background-position: center;
-    background-repeat:initial;
-    background-size: cover;
+  color: white;
+  background-color: #010015;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../resources/images/heroImage.jpg);
+  background-position: center;
+  background-repeat: initial;
+  background-size: cover;
 
-    display: flex;
-    flex-direction: column;
-    text-align : center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
 
-    min-height: 100vh;
-    padding: 16px;
-    gap: 32px;
+  min-height: 100vh;
+  padding: 16px;
+  gap: 32px;
 
-    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=70273);
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=70273);
 }
 
 #hero {
-    animation: 1s ease-out 0s 1 fadeIn;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    text-align : center;
-    justify-content: center;
-    gap: 16px;
+  animation: 1s ease-out 0s 1 fadeIn;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 16px;
 
-    /* border-style: solid;
+  /* border-style: solid;
     border-color: white;
     border-width: 5px; */
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
 
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .musicBox {
-    width: 350px;
-    height: 350px;
-    /* box-shadow: -5px 5px 5px lightgray */
+  width: 350px;
+  height: 350px;
+  /* box-shadow: -5px 5px 5px lightgray */
 }
 
 .musicBox img {
-    max-width: 100%;
-    height: auto;
-  }
-
-.musicBox>* {
-    position: relative;
-    top: 0;
-    right: 0;
-    transition: all ease 1s;
-    width: 350px;
-    height: 350px;
+  max-width: 100%;
+  height: auto;
 }
 
-.musicBox>*:hover {
-    cursor: pointer;
-    top: -5px;
-    right: -2px;
+.musicBox > * {
+  position: relative;
+  top: 0;
+  right: 0;
+  transition: all ease 1s;
+  width: 350px;
+  height: 350px;
+}
+
+.musicBox > *:hover {
+  cursor: pointer;
+  top: -5px;
+  right: -2px;
 }
 
 .musicContainer {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 
-
-
-#hero>* {
-    color: white;
+#hero > * {
+  color: white;
 }
 
 #heroTitle {
-    text-align: center;
-    font-size: 64px;
-    letter-spacing: -5px;
-    font-family: 'KanitBold', Arial, sans-serif;
+  text-align: center;
+  font-size: 64px;
+  letter-spacing: -5px;
+  font-family: "KanitBold", Arial, sans-serif;
 }
 #heroScroller {
-    animation: 4s ease-out 0s 1 slideInFromBottom;
+  animation: 4s ease-out 0s 1 slideInFromBottom;
 
-    text-align: center;
-    position: relative;
-    top: 23%;
+  text-align: center;
+  position: relative;
+  top: 23%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
-
 
 .section {
-    font-size: xx-large;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-    padding: 32px;
+  font-size: xx-large;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 32px;
 }
 #currentInfo {
-    text-align: right;
+  text-align: right;
 }
-#currentInfo>* {
-    position: relative;
-    top: 0;
-    right: 0;
-    transition: all ease 0.5s;
+#currentInfo > * {
+  position: relative;
+  top: 0;
+  right: 0;
+  transition: all ease 0.5s;
 }
-#currentInfo>*:hover {
-    top: -5px;
-    right: -2px;
+#currentInfo > *:hover {
+  top: -5px;
+  right: -2px;
 }
 #currentlyListeningBox {
-    display: flex;
-    gap: 128px;
+  display: flex;
+  gap: 128px;
 }
 #currentName {
-    font-style: italic;
-    letter-spacing: -5px;
-    font-family: 'KanitBold', Arial, sans-serif;
-    font-size: 64px;
+  font-style: italic;
+  letter-spacing: -5px;
+  font-family: "KanitBold", Arial, sans-serif;
+  font-size: 64px;
 }
 /* #favorites {
 
@@ -205,17 +279,17 @@ table {
 */
 
 #libLink {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #libLink img {
-    position: relative;
-    right: 0;
-    transition: all ease 0.5s;
+  position: relative;
+  right: 0;
+  transition: all ease 0.5s;
 }
 #libLink img:hover {
-    right: -5px;
+  right: -5px;
 }
 
 /*
@@ -223,232 +297,228 @@ table {
 
 } */
 
-
-
 .subtitle {
-    text-align: center;
-    font-size: x-large;
+  text-align: center;
+  font-size: x-large;
 }
 
 .icon {
-    position: relative;
-    bottom: 0;
-    transition: all ease 0.5s;
+  position: relative;
+  bottom: 0;
+  transition: all ease 0.5s;
 
-    width: 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
 }
 .icon:hover {
-    bottom: -5px;
+  bottom: -5px;
 }
 
 #album-art {
-    position: relative;
-    top: 0;
-    right: 0;
-    transition: all ease 1s;
+  position: relative;
+  top: 0;
+  right: 0;
+  transition: all ease 1s;
 }
 
 #album-art:hover {
-    top: -5px;
-    right: -2px;
+  top: -5px;
+  right: -2px;
 }
 
 #album-side {
-    display: flex;
-    gap: 24px;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 16px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 16px;
 }
 
 #album-display {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 
-    flex-wrap: wrap;
-    gap: 16px;
-
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 #album-tracks {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 #album-text-info {
-    text-align: left;
-    width: 100%;
+  text-align: left;
+  width: 100%;
 }
 
-#album-text-info>* {
-    overflow-wrap: normal;
-    max-width: 300px;
+#album-text-info > * {
+  overflow-wrap: normal;
+  max-width: 300px;
 }
 
 #album-art {
-    max-width: 300px;
-    max-height: 300px;
-    height: auto;
-    border-radius: 5px;
+  max-width: 300px;
+  max-height: 300px;
+  height: auto;
+  border-radius: 5px;
 }
 
-#album-text-info>h1 {
-    font-family: 'KanitBold', Arial, sans-serif;
-    /* letter-spacing: -5px; */
+#album-text-info > h1 {
+  font-family: "KanitBold", Arial, sans-serif;
+  /* letter-spacing: -5px; */
 }
-#album-text-info>p {
-    font-size: 24px;
+#album-text-info > p {
+  font-size: 24px;
 }
 
 #expand-artist {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #artist-side {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 16px;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 16px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 16px;
 
-    text-align: right;
+  text-align: right;
 }
 
 #artist-text-info {
-    text-align: right;
-    width: 100%;
+  text-align: right;
+  width: 100%;
 }
 
-#artist-text-info>h1 {
-    font-family: 'KanitBold', Arial, sans-serif;
-    /* letter-spacing: -5px; */
+#artist-text-info > h1 {
+  font-family: "KanitBold", Arial, sans-serif;
+  /* letter-spacing: -5px; */
 }
-#artist-text-info>p {
-    font-size: 24px;
+#artist-text-info > p {
+  font-size: 24px;
 }
 
 #artist-art {
-    max-width: 300px;
-    max-height: 300px;
-    border-radius: 5px;
-    cursor: pointer;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .track {
-    display: flex;
+  display: flex;
 }
-.track>* {
-    font-size: smaller;
-    text-align: left;
-}
-
-#album-search, #artist-search {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
+.track > * {
+  font-size: smaller;
+  text-align: left;
 }
 
-#album-search-box, #artist-search-box {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-
-    align-items: center;
+#album-search,
+#artist-search {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
 }
 
-#search-box>input {
-    width: 150px;
-    height: 10px;
-    font-size: 16px;
-    padding: 8px;
-    /* border-radius: 5px; */
-    border: 1px solid black;
+#album-search-box,
+#artist-search-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  align-items: center;
 }
 
-#search-button, #artist-search-button {
-    text-decoration: underline;
-    cursor: pointer;
+#search-box > input {
+  width: 150px;
+  height: 10px;
+  font-size: 16px;
+  padding: 8px;
+  /* border-radius: 5px; */
+  border: 1px solid black;
+}
 
-    font-size: 24px;
+#search-button,
+#artist-search-button {
+  text-decoration: underline;
+  cursor: pointer;
+
+  font-size: 24px;
 }
 
 #search-results {
-    display: flex;
-    flex-direction: column;
-    /* gap: 16px; */
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 8px;
-    
+  display: flex;
+  flex-direction: column;
+  /* gap: 16px; */
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px;
 }
 
-#search-results>* {
-    text-align: left;
-    font-size: 24px;
-    color: white;
-    padding: 8px;
+#search-results > * {
+  text-align: left;
+  font-size: 24px;
+  color: white;
+  padding: 8px;
 }
 
-#search-results>*:hover {
-    text-decoration: underline;
-    cursor: pointer;
+#search-results > *:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 @keyframes slideInFromBottom {
-    0% {
-        opacity: 0%;
-      transform: translateY(100%);
-    }
-    75% { 
-        opacity: 0%;
-        transform: translateY(100%)
-    }
-    90% {
-        opacity: 100%;
-      transform: translateY(-6%);
-    }
-    100% {
-        opacity: 100%;
-      transform: translateY(0);
-    }
+  0% {
+    opacity: 0%;
+    transform: translateY(100%);
   }
-
-  @keyframes fadeIn {
-    0% {
-        opacity: 0%;
-      transform: translateY(5%);
-    }
-    100% {
-        opacity: 100%;
-      transform: translateY(0);
-    }
+  75% {
+    opacity: 0%;
+    transform: translateY(100%);
   }
-
-@media only screen and (max-width: 767px) {
-    #currentlyListeningBox {
-        flex-direction: column;
-        gap: 8px;
-    }
-    #currentName {
-        right: 16px;
-    }
+  90% {
+    opacity: 100%;
+    transform: translateY(-6%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
 }
 
-@media
-only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5){
-
-  html,
-  body{
-    width:100%;
-    overflow-x:hidden;
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+    transform: translateY(5%);
   }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
 
+@media only screen and (max-width: 767px) {
+  #currentlyListeningBox {
+    flex-direction: column;
+    gap: 8px;
+  }
+  #currentName {
+    right: 16px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
 }
